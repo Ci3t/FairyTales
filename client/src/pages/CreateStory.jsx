@@ -5,18 +5,18 @@ import './createStory.css';
 import { createStory } from '../components/api/fetch';
 
 function CreateStory() {
-	const [storyInfo, setStoryInfo] = useState({
-		title: '',
+  const [storyInfo, setStoryInfo] = useState({
+    title: "",
 
-		culture: '',
-		data: '',
-	});
+    culture: "",
+    data: "",
+  });
 
-	const handleChange = ({ target }) => {
-		const { value, name } = target;
+  const handleChange = ({ target }) => {
+    const { value, name } = target;
 
-		setStoryInfo({ ...storyInfo, [name]: value });
-	};
+    setStoryInfo({ ...storyInfo, [name]: value });
+  };
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
