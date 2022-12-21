@@ -1,6 +1,19 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getStories } from '../components/api/fetch';
 
 const StoryList = () => {
+	const [stories, setStories] = useState([]);
+	useEffect(() => {
+		const Allstories = async () => {
+			const story = await getStories();
+			setStories(story);
+		}
+		Allstories();
+	})
+	console.log(stories);
+
+
     return (
 			<header>
 				<ul>
