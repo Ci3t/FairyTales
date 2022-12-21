@@ -16,7 +16,7 @@ const scrap = async (term) => {
         const tempStory = [];
         stories.forEach((storyTag, i) => {
           if (i < 5)
-            temp.push({
+            tempStory.push({
               title: storyTag.innerText,
               storyLink: storyTag.href,
               culture: term,
@@ -45,7 +45,7 @@ const scrap = async (term) => {
 };
 
 export const getStories = async () => {
-  // await scrap("jewish");
+  await scrap("jewish");
   // await scrap("arabic");
-  // await scrap("russian");
+  await scrap("russian");
 };
