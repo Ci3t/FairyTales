@@ -4,7 +4,7 @@ import cors from "cors";
 import router from "./Routes/routes.js";
 import { getStories } from "./scraping/scrapper.js";
 
-// getStories();
+getStories();
 
 const PORT = process.env.PORT || 5000;
 const server = express();
