@@ -28,10 +28,10 @@ export default function TalePage({ taleID }) {
             <img width="20px" src={back}></img> Back to home page
           </button>
         </NavLink>
-        <p className="story__category">{story.culture}</p>
-        <h1 className="story__title">{story.title}</h1>
+        <p className="story__category">{state.story.culture}</p>
+        <h1 className="story__title">{state.story.title}</h1>
         <div className="story__content">
-          {story.data}
+          {state.story.data}
           {/* <p className="story__paragraph">
                 Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
                 Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
