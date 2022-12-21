@@ -10,10 +10,10 @@ router.post("/tale", async (req, res) => {
     res.status(400).json(error.message);
   }
 });
-router.get("/tales/:title", async (req, res) => {
+router.get("/tales/:id", async (req, res) => {
   try {
-    const { title } = req.params;
-    const tale = await Tale.findOne({ title });
+    const { id } = req.params;
+    const tale = await Tale.findById(id);
     if (!tale) {
       throw new Error(`Tale  ${title} does not exist!`);
     }
