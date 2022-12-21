@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import "./story.css";
 import { getSingleStory } from "../components/api/fetch";
 import { NavLink } from "react-router-dom";
+import back from "../assets/images/back.png";
 export default function TalePage({ taleID }) {
   const [state, setState] = useState({
     error: null,
