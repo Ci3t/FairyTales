@@ -45,7 +45,7 @@ const scrap = async (term) => {
 };
 
 export const getStories = async () => {
-  await scrap("jewish");
+  // await scrap("jewish");
   // await scrap("arabic");
-  await scrap("russian");
+  // await scrap("russian");
 };
