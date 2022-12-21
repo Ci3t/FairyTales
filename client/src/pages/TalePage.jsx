@@ -19,6 +19,7 @@ export default function TalePage({ taleID }) {
         setState((st) => ({ ...st, error }));
       } finally {
         setState((st) => ({ ...st, loading: false }));
+        console.log(state.story);
       }
     }, 0)
   );
@@ -27,7 +28,7 @@ export default function TalePage({ taleID }) {
       <div className="story">
         <NavLink to="/">
           <button className="story__btn">
-            <img width="20px" src={back}></img> Back to home page
+            <img style={{ width: "20px" }} src={back}></img> Back to home page
           </button>
         </NavLink>
         <p className="story__category">{state.story.culture}</p>
