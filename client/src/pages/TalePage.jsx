@@ -28,11 +28,13 @@ export default function TalePage({ taleID }) {
       <div className="story">
         <NavLink to="/">
           <button className="story__btn">
-            <img style={{ width: "20px" }} src={back} alt=''></img> Back to home page
+            <img style={{ width: "20px" }} src={back} alt=""></img> Back to home
+            page
           </button>
         </NavLink>
         <p className="story__category">{state.story.culture}</p>
         <h1 className="story__title">{state.story.title}</h1>
+
         <div className="story__content">
           {state.story.data}
           {/* <p className="story__paragraph">
