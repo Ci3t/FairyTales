@@ -28,7 +28,7 @@ export default function TalePage({ taleID }) {
       <div className="story">
         <NavLink to="/">
           <button className="story__btn">
-            <img style={{ width: "20px" }} src={back}></img> Back to home page
+            <img style={{ width: "20px" }} src={back} alt=''></img> Back to home page
           </button>
         </NavLink>
         <p className="story__category">{state.story.culture}</p>
