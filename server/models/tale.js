@@ -9,7 +9,6 @@ const taleSchema = new Schema(
     },
     storyLink: {
       type: String,
-      required: true,
     },
     culture: {
       type: String,
