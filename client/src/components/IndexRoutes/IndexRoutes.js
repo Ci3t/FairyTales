@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Stories from "../Stories";
+import CreateStory from "../../pages/CreateStory";
+
 import { Navigate } from "react-router-dom";
 import HomePage from "../../pages/HomePage";
 import Story from "../../pages/Randomstory";

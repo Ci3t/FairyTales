@@ -10,6 +10,17 @@ router.post("/tale", async (req, res) => {
     res.status(400).json(error.message);
   }
 });
+router.get("/tales", async (_, res) => {
+  try {
+    const data = await Tale.find({}, { title: 1 });
+    if (!data) {
+      throw new Error("no stories found");
+    }
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(404).json(error.message);
+  }
+});
 router.get("/tales/:id", async (req, res) => {
   try {
     const { id } = req.params;

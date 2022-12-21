@@ -4,7 +4,14 @@ import "./homepage.css"
 import hebrewIcon from '../assets/images/hebrewIcon.png'
 import arabicIcon from '../assets/images/arabicIcon.png'
 const HomePage = () => {
-    
+    const [state, setState] = useState('');
+    const handleState = (e) => {
+        const value = e.target.value;
+        setState(value);
+    }
+    const hendleSearch = () => {
+        
+    }
     return (
 		<>
 		
@@ -41,3 +48,13 @@ const HomePage = () => {
     
 }
 export default HomePage ;
+
+// // 
+// const Homepage () => {
+//     const [query, setQuery] = useState('')
+
+//     const handleQuery = (e) => {
+//         const val = e.target.value;
+//     }
+    
+// }
