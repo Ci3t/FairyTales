@@ -1,1 +1,1 @@
-import './mongoose/moongose.connect.js'
+import  './mongoose/moongose.connect.js'
