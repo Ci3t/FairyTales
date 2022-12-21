@@ -20,5 +20,11 @@ export default function TalePage({ taleID, children }) {
       }
     }, 0)
   );
-  return "";
+  return (
+    <div>
+      <h1>{tale.title}</h1>
+      <p>{tale.culture}</p>
+      <div>{tale.data}</div>
+    </div>
+  );
 }
