@@ -8,3 +8,7 @@
   left:0;
     
 }
+
+.heightOfTextArea {
+    min-height: 100vh;
+}
