@@ -12,7 +12,7 @@ const taleSchema = new Schema({
   },
   culture: {
     type: String,
-    enum: ["arabic", "jewish"],
+    enum: ["arabic", "jewish", "russian"],
     required: true,
   },
   data: { type: String, default: "", required: true },
