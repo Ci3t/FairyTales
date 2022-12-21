@@ -15,6 +15,6 @@ const taleSchema = new Schema({
     required: true,
   },
   data: [String],
-  default: "",
+  default: [],
 });
 export const Tale = new model("Tale", taleSchema);
