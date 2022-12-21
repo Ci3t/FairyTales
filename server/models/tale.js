@@ -15,6 +15,6 @@ const taleSchema = new Schema({
     enum: ["arabic", "jewish", "russian"],
     required: true,
   },
-  data: { type: String, default: "", required: true },
+  data: { type: String, required: true },
 });
 export const Tale = model("Tale", taleSchema);
