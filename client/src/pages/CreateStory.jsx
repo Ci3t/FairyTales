@@ -1,34 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-
-import './createStory.css'
+import "./createStory.css";
 import { createStory } from "../components/api/fetch";
 
-
 function CreateStory() {
-	const [storyInfo, setStoryInfo] = useState({
-		title: '',
+  const [storyInfo, setStoryInfo] = useState({
+    title: "",
 
-		culture: '',
-		data: '',
-	});
+    culture: "",
+    data: "",
+  });
 
-	const handleChange = ({ target }) => {
-		const { value, name } = target;
+  const handleChange = ({ target }) => {
+    const { value, name } = target;
 
-		setStoryInfo({ ...storyInfo, [name]: value });
-	};
+    setStoryInfo({ ...storyInfo, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     console.log(storyInfo);
     const story = await createStory(storyInfo);
   };
   const { title, culture, data } = storyInfo;
 
-
   return (
     <div className="bgKidImage mt-0">
+
 
    
     <div className=" p-5 ml-auto mr-auto flex justify-center items-center max-w-4xl">
@@ -88,13 +86,10 @@ function CreateStory() {
             Submit
           </button>
         </form>
+
       </div>
-
-
-    </div>
     </div>
   );
 }
-
 
 export default CreateStory;
