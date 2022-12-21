@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "./homepage.css"
 import hebrewIcon from '../assets/images/hebrewIcon.png'
 import arabicIcon from '../assets/images/arabicIcon.png'
-import { useState } from "react";
+// import { useState } from "react";
 const HomePage = () => {
-    const [state, setState] = useState('');
-    const handleState = (e) => {
-        const value = e.target.value;
-        setState(value);
-    }
+    // const [state, setState] = useState('');
+    // const handleState = (e) => {
+    //     const value = e.target.value;
+    //     setState(value);
+    // }
     const hendleSearch = () => {
         
     }

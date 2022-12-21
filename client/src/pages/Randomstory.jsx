@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Randomstory = () => {
     return (
         <div className="story">
-            <NavLink to="/"><button className="story__btn"><img width="20px" src={back}></img> Back to home page</button></NavLink>
+            <NavLink to="/"><button className="story__btn"><img width="20px" src={back} alt=''></img> Back to home page</button></NavLink>
             <p className="story__category">Arabic Story</p>
             <h1 className="story__title">Story Title</h1>
             <div className="story__content">

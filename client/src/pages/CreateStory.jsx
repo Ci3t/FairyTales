@@ -37,7 +37,7 @@ function CreateStory() {
               required
             />
             <label
-              for="floating_email"
+              htmlfor="title"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Title
@@ -55,7 +55,7 @@ function CreateStory() {
               required
             />
             <label
-              for="culture"
+              htmlfor="culture"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Culture
@@ -63,7 +63,7 @@ function CreateStory() {
           </div>
           <div class="relative z-0 mb-6 w-full group">
             <label
-              for="message"
+              htmlfor="message"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Tell us a story
