@@ -17,4 +17,4 @@ const taleSchema = new Schema({
   data: [String],
   default: [],
 });
-export const Tale = new model("Tale", taleSchema);
+export const Tale = model("Tale", taleSchema);
