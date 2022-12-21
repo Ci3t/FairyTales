@@ -19,7 +19,7 @@ const StoryList = () => {
 			<ul>
 				{stories?.map(story => 
 					<li key={story._id}>
-						<Link to={`/stories/${story._id}`}>{story.title } </Link>
+						<Link to={`/stories/${story._id}`}>{story.title }</Link>
 					</li>
 				)}
 				</ul>
