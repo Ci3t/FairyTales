@@ -10,9 +10,9 @@ router.post("/tale", async (req, res) => {
     res.status(400).json(error.message);
   }
 });
-router.get("/tales", (_, res) => {
+router.get("/tales", async (_, res) => {
   try {
-    const data = Tale.find({}).projection({ _id: 1, title: 1 });
+    const data = await Tale.find({}, { title: 1 });
     if (!data) {
       throw new Error("no stories found");
     }
