@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { getSingleStory } from "../components/api/fetch";
-
-export default function TalePage({ taleID, children }) {
+import { NavLink } from "react-router-dom";
+export default function TalePage({ taleID }) {
   const [state, setState] = useState({
     error: null,
     loading: false,
-    tale: null,
+    story: null,
   });
   useEffect(() =>
     setTimeout(async () => {
       setState((st) => ({ ...st, loading: true }));
       try {
         const tale = await getSingleStory(taleID);
-        setState((st) => ({ ...st, tale }));
+        setState((st) => ({ ...st, story }));
       } catch (error) {
         setState((st) => ({ ...st, error }));
       } finally {
@@ -22,9 +22,36 @@ export default function TalePage({ taleID, children }) {
   );
   return (
     <div>
-      <h1>{tale.title}</h1>
-      <p>{tale.culture}</p>
-      <div>{tale.data}</div>
+      <div className="story">
+        <NavLink to="/">
+          <button className="story__btn">
+            <img width="20px" src={back}></img> Back to home page
+          </button>
+        </NavLink>
+        <p className="story__category">{story.culture}</p>
+        <h1 className="story__title">{story.title}</h1>
+        <div className="story__content">
+          {story.data}
+          {/* <p className="story__paragraph">
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                </p>
+                <p className="story__paragraph">
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                </p>
+                <p className="story__paragraph">
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                Arabic story content pargraph Arabic story content pargraph Arabic story content pargraph.
+                </p> */}
+        </div>
+      </div>
     </div>
   );
 }
