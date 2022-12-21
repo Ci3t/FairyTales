@@ -4,6 +4,7 @@ const taleSchema = new Schema({
   title: {
     type: String,
     required: true,
+    unique: true,
   },
   storyLink: {
     type: String,
@@ -14,7 +15,6 @@ const taleSchema = new Schema({
     enum: ["arabic", "jewish"],
     required: true,
   },
-  data: String,
-  default: "",
+  data: { type: String, default: "", required: true },
 });
 export const Tale = model("Tale", taleSchema);
