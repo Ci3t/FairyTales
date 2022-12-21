@@ -15,7 +15,7 @@ router.get("/tales/:id", async (req, res) => {
     const { id } = req.params;
     const tale = await Tale.findById(id);
     if (!tale) {
-      throw new Error(`Tale  ${title} does not exist!`);
+      throw new Error(`Tale with id ${id} does not exist!`);
     }
     res.status(200).json(tale);
   } catch (error) {
