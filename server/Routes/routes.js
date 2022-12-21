@@ -22,4 +22,29 @@ router.get("/tales/:title", async (req, res) => {
     res.status(404).json(error.message);
   }
 });
+router.patch("/tales/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const tale = await Tale.findByIdAndUpdate(id, req.body);
+    if (!tale) {
+      throw new Error(`Update failed. Tale with id ${id} does not exist!`);
+    }
+    res.status(200).json(tale);
+  } catch (error) {
+    res.status(404).json(error.message);
+  }
+});
+router.delete("/tales/:id", async (req, res) => {
+  try {
+    const tale = await Tale.findByIdAndDelete(req.params.id);
+    if (!tale) {
+      throw new Error(`Error. Invalid tale ID to delete.`);
+    }
+    res
+      .status(200)
+      .json({ message: `Tale ${tale.title} was deleted successfully` });
+  } catch (error) {
+    res.status(404).json(error.message);
+  }
+});
 export default router;
