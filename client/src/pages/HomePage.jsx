@@ -10,9 +10,8 @@ const HomePage = () => {
         const value = e.target.value;
         setState(value);
     }
-    const hendleSearch = () => {
-        
-    }
+	const hendleSearch = () => {	
+		}
     return (
 			<>
 				<div className='home'>
@@ -31,12 +30,3 @@ const HomePage = () => {
 }
 export default HomePage ;
 
-// // 
-// const Homepage () => {
-//     const [query, setQuery] = useState('')
-
-//     const handleQuery = (e) => {
-//         const val = e.target.value;
-//     }
-    
-// }
