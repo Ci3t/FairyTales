@@ -1,0 +1,10 @@
+.bgKidImage{
+
+ 
+  height: 100vh;
+  background-image: url('../../public/images/wallpaper.jpg');
+  background-position: fixed;
+  top: 0;
+  left:0;
+    
+}
