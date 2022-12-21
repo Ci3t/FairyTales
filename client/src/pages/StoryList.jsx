@@ -8,57 +8,20 @@ const StoryList = () => {
 		const Allstories = async () => {
 			const story = await getStories();
 			setStories(story);
+			// console.log(story);
 		}
 		Allstories();
-	})
-	console.log(stories);
+	},[])
 
 
     return (
 			<header>
-				<ul>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							some text
-						</Link>
+			<ul>
+				{stories?.map(story => 
+					<li key={story._id}>
+						<Link to={`/stories/${story._id}`}>{story.title } </Link>
 					</li>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							some text
-						</Link>
-					</li>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							some text
-						</Link>
-					</li>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							Home text
-						</Link>
-					</li>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							some text
-						</Link>
-					</li>
-					<li>
-						<Link
-							className='link'
-							to='/'>
-							Home text
-						</Link>
-					</li>
+				)}
 				</ul>
 			</header>
 		);

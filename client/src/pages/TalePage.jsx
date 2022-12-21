@@ -19,6 +19,7 @@ export default function TalePage({ taleID }) {
         setState((st) => ({ ...st, error }));
       } finally {
         setState((st) => ({ ...st, loading: false }));
+        
       }
     }, 0)
   );
