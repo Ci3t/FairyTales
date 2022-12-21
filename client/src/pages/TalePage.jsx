@@ -11,7 +11,7 @@ export default function TalePage({ taleID }) {
     setTimeout(async () => {
       setState((st) => ({ ...st, loading: true }));
       try {
-        const tale = await getSingleStory(taleID);
+        const story = await getSingleStory(taleID);
         setState((st) => ({ ...st, story }));
       } catch (error) {
         setState((st) => ({ ...st, error }));
