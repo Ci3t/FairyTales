@@ -39,10 +39,10 @@
 }
 
 .languageSelector h1 {
-    color: #2F69FF;
+    color: #6b76a7;
 }
 .languageSelector__option {
-    background-color: #002586;
+    background-color: #f1950b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,4 +50,9 @@
     gap: 2rem;
     border-radius: 13px;
     color: white;
+}
+
+.ruClass{
+    padding:0.5em;
+    border:1px white solid
 }
