@@ -12,7 +12,7 @@ router.post("/tale", async (req, res) => {
 });
 router.get("/tales", async (_, res) => {
   try {
-    const data = await Tale.find({}, { title: 1 });
+    const data = await Tale.find({}, { title: 1, culture: 1 });
     if (!data) {
       throw new Error("no stories found");
     }

@@ -21,6 +21,7 @@ function CreateStory() {
     e.preventDefault();
     console.log(storyInfo);
     const story = await createStory(storyInfo);
+    if (!story) console.log("problem creating story");
   };
   const { title, culture, data } = storyInfo;
 
