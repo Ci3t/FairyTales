@@ -20,8 +20,7 @@ const StoryList = ({ culture, setCultureSelected }) => {
   return (
     <header>
       <ul>
-        {/* // eslint-disable-next-line */}
-        {stories?.filter((story) => {
+        {stories?.map((story) => {
           if (story.culture === culture)
             return (
               <li key={story._id}>
